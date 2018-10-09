@@ -8,7 +8,7 @@ namespace WebBanQuanAo.Controllers
 {
     public class ProductController : Controller
     {
-        ShopQuanAoOnlineEntities _db = new ShopQuanAoOnlineEntities();
+        ShopQuanAoOnlineEntities6 _db = new ShopQuanAoOnlineEntities6();
         // GET: Product
         public ActionResult Index(string meta)
         {

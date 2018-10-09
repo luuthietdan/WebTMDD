@@ -16,7 +16,7 @@ namespace WebBanQuanAo.Areas.Admin.Controllers
 {
     public class NewsController : Controller
     {
-        private ShopQuanAoOnlineEntities db = new ShopQuanAoOnlineEntities();
+        private ShopQuanAoOnlineEntities6 db = new ShopQuanAoOnlineEntities6();
 
         // GET: Admin/News
         public ActionResult Index()

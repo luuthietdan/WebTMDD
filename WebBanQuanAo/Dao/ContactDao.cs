@@ -7,10 +7,10 @@ namespace WebBanQuanAo.Dao
 {
     public class ContactDao
     {
-        ShopQuanAoOnlineEntities db = null;
+        ShopQuanAoOnlineEntities6 db = null;
         public ContactDao()
         {
-            db = new ShopQuanAoOnlineEntities();
+            db = new ShopQuanAoOnlineEntities6();
         }
         public Contact GetActiveContact()
         {

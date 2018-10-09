@@ -9,7 +9,7 @@ namespace WebBanQuanAo.Controllers
 {
     public class GioHangController : Controller
     {
-        ShopQuanAoOnlineEntities db = new ShopQuanAoOnlineEntities();
+        ShopQuanAoOnlineEntities6 db = new ShopQuanAoOnlineEntities6();
         // GET: GioHang
         // lấy giỏ hàng
         public List<GioHang> LayGioHang()

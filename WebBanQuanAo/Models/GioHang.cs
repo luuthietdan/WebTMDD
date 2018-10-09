@@ -8,7 +8,7 @@ namespace WebBanQuanAo.Models
 {
     public class GioHang
     {
-        ShopQuanAoOnlineEntities db = new ShopQuanAoOnlineEntities();
+        ShopQuanAoOnlineEntities6 db = new ShopQuanAoOnlineEntities6();
         public int iMaSP { get; set; }
         public string sTenSP { get; set; }
         public string sHinhAnh { get; set; }

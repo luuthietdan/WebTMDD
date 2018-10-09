@@ -9,7 +9,7 @@ namespace WebBanQuanAo.Controllers
 
     public class TempController : Controller
     {
-        ShopQuanAoOnlineEntities _db = new ShopQuanAoOnlineEntities();
+        ShopQuanAoOnlineEntities6 _db = new ShopQuanAoOnlineEntities6();
         // GET: Temp
         public ActionResult Index()
         {

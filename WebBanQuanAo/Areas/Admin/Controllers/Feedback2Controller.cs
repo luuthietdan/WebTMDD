@@ -12,7 +12,7 @@ namespace WebBanQuanAo.Areas.Admin.Controllers
 {
     public class Feedback2Controller : Controller
     {
-        private ShopQuanAoOnlineEntities db = new ShopQuanAoOnlineEntities();
+        private ShopQuanAoOnlineEntities6 db = new ShopQuanAoOnlineEntities6();
 
         // GET: Admin/Feedback2
         public ActionResult Index()

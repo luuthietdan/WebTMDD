@@ -8,7 +8,7 @@ namespace WebBanQuanAo.Controllers
 {
     public class DefaultController : Controller
     {
-        ShopQuanAoOnlineEntities _db = new ShopQuanAoOnlineEntities();
+        ShopQuanAoOnlineEntities6 _db = new ShopQuanAoOnlineEntities6();
         // GET: Default
         public ActionResult Index()
         {

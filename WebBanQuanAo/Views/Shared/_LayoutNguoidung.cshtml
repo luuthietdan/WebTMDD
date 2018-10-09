@@ -1,6 +1,10 @@
-﻿@{
-    Layout = null;
+﻿
+@{
+    ViewBag.Title = "AfterLogin";
 }
+
+
+
 
 <!DOCTYPE HTML>
 <html>
@@ -76,8 +80,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="top-right">
                     <ul>
-                        <li><a href="checkout.html">Kiểm Tra</a></li>
-                        <li><a href="login.html">Đăng Nhập</a></li>
+                        @if (Session["UserID"] != null)
+                        {
+                            <div>
+                                Welcome:<a href="#">@Session["UserName"]</a><br />
+                                <a href="/Register/Logout">Logout</a>
+                            </div>
+                        }
+
+                        <li>
+                            <a href="@Url.Action("Index", "Register")"><i class="fa fa-th-list fa-fw"></i>Đăng nhập</a>
+                        </li>
                         <li><a href="@Url.Action("GioHang" , "GioHang")">@Html.Action("GioHangPartial", "GioHang")</a></li>
                     </ul>
                 </div>
@@ -173,7 +186,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h4>Tài Khoản Của Tôi</h4>
                     <ul>
                         <li><a href="checkout.html">Kiểm Tra</a></li>
-                        <li><a href="login.html">Đăng Nhập</a></li>
+                       
                         <li><a href="registered.html">Tạo Tài Khoản</a></li>
                     </ul>
                 </div>

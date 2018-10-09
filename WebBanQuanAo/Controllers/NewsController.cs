@@ -8,8 +8,8 @@ namespace WebBanQuanAo.Controllers
 {
     public class NewsController : Controller
     {
-        ShopQuanAoOnlineEntities _db = new ShopQuanAoOnlineEntities();
-        // GET: News
+        ShopQuanAoOnlineEntities6 _db = new ShopQuanAoOnlineEntities6();
+        // GET: New
         public ActionResult Index()
         {
             var v = from t in _db.News

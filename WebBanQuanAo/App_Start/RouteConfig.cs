@@ -21,6 +21,7 @@ namespace WebBanQuanAo
             },
             namespaces: new[] { "WebBanQuanAo.Controllers" });
 
+
             routes.MapRoute(
                 name: "QuanAoNu1",
                 url: "san-pham/{meta}",
@@ -73,6 +74,14 @@ namespace WebBanQuanAo
                  namespaces: new[] { "WebBanQuanAo.Controllers" }
            
             );
+            routes.MapRoute(
+                name: "Register",
+                url: "{Login}",
+                defaults: new { controller = "Register", action = "Index" },
+                 namespaces: new[] { "WebBanQuanAo.Controllers" }
+
+            );
+
         }
     }
 }
