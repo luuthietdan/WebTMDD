@@ -1,0 +1,29 @@
+﻿@model List<WebBanQuanAo.Models.Product>
+@{
+    Layout = "~/Views/Shared/_LayoutNguoidung.cshtml";
+}
+
+@*<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Trang Chủ</title>
+</head>
+<body>*@
+
+    @*@{ Html.RenderAction("getBanner", "Default");}*@
+
+
+    <p style="font-size:40px;margin-left:30px;">@Html.ActionLink("Quần Áo Nam", "index", "QuanAoNam")</p>
+    <div style="margin-left:40px;">
+        @{Html.RenderAction("QuanAoNam", "QuanAoNam"); }
+        <div class="clear"></div>
+    </div>
+    <p style="font-size:40px;margin-left:30px;">@Html.ActionLink("Quần Áo Nữ", "index", "QuanAoNu")</p>
+    <div style="margin-left:40px;">
+        @{Html.RenderAction("QuanAoNu", "QuanAoNu"); }
+        <div class="clear"></div>
+    </div>
+@*@*</body>*@
+@*</html>*@

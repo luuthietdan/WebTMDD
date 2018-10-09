@@ -1,0 +1,112 @@
+﻿@model WebBanQuanAo.Models.Product
+@{
+    ViewBag.Title = Model.name;
+    Layout = "~/Views/Shared/_LayoutNguoidung.cshtml";
+}
+@Styles.Render("~/css/detail")
+@Scripts.Render("~/css/detail")
+<script>
+    jQuery(document).ready(function ($) {
+
+        $('#etalage').etalage({
+            thumb_image_width: 300,
+            thumb_image_height: 400,
+            source_image_width: 900,
+            source_image_height: 1200,
+            show_hint: true,
+            click_callback: function (image_anchor, instance_id) {
+                alert('Callback example:\nYou clicked on an image with the anchor: "' + image_anchor + '"\n(in Etalage instance: "' + instance_id + '")');
+            }
+        });
+
+    });
+</script>
+<!-- the jScrollPane script
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+    -->
+<script type="text/javascript" id="sourcecode">
+    $(function () {
+        $('.scroll-pane').jScrollPane();
+    });
+</script>
+
+    <div class="modal-content modal-info">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+            <div class="news-gr">
+                @*<div class="col-md-5 new-grid1">
+                        <img src="~/Images/" class="img-responsive" alt="">
+                    </div>*@
+                <div class="grid images_3_of_2">
+                    <ul id="etalage">
+                        <li>
+                            <a href="optionallink.html">
+                                <img class="etalage_thumb_image img-responsive" src="/Content/upload/img/product/@Model.img" alt="" width="350px" height="150px">
+                                @*<img class="etalage_source_image img-responsive" src="/Content/upload/img/product/@Model.img" alt="">*@
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-7 new-grid">
+                    <h5>@Model.name</h5>
+                    <h6>@Model.description</h6>
+                    price :<span>@Model.price</span>
+                    <div class="color-quality">
+                        <div class="color-quality-left">
+                            <h6>Màu sắc : </h6>
+                            <ul>
+                                <li><a href="#"><span></span>Đỏ</a></li>
+                                <li><a href="#" class="brown"><span></span>Vàng</a></li>
+                                <li><a href="#" class="purple"><span></span>Tím Xanh</a></li>
+                                <li><a href="#" class="gray"><span></span>Tím</a></li>
+                            </ul>
+                        </div>
+                        <div class="color-quality-right">
+                            <h6>Số Lượng :</h6>
+                            <div class="quantity">
+                                <div class="quantity-select">
+                                    <div class="entry value-minus1">&nbsp;</div>
+                                    <div class="entry value1"><span>1</span></div>
+                                    <div class="entry value-plus1 active">&nbsp;</div>
+                                </div>
+                            </div>
+                            <!--quantity-->
+                            <script>
+                                $('.value-plus1').on('click', function () {
+                                    var divUpd = $(this).parent().find('.value1'), newVal = parseInt(divUpd.text(), 10) + 1;
+                                    divUpd.text(newVal);
+                                });
+
+                                $('.value-minus1').on('click', function () {
+                                    var divUpd = $(this).parent().find('.value1'), newVal = parseInt(divUpd.text(), 10) - 1;
+                                    if (newVal >= 1) divUpd.text(newVal);
+                                });
+                            </script>
+                            <!--quantity-->
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="women">
+                        <span class="size">XL / XXL / S </span>
+                        <p><del>@Model.price</del>></p>
+                        <div class="add">
+                            <!--<button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="images/of2.png">Thêm vào giỏ hàng</button>-->
+                            @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMaSP = Model.id, @strURL = Request.Url.ToString() }))
+    {
+                        <input type="submit" value="BUY" style="width:50px;height:50px;background-color:aqua;padding-right:54px;margin-top:30px;color:black; " id="btnGioHang" class="btn btn-primary" />
+
+}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+

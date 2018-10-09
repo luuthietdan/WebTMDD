@@ -1,0 +1,45 @@
+﻿
+@model List<WebBanQuanAo.Models.Product>
+
+@{
+    ViewBag.Title = "Category";
+    ViewBag.Heading = "Danh Sach Cac San Pham";
+    Layout = "~/Views/Shared/_LayoutNguoidung.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div class="arrivals-grids">
+        <div class="col-md-3 arrival-grid simpleCart_shelfItem">
+            <div class="grid-arr">
+                <div class="grid-arrival">
+                    <figure>
+                        <a href="/@ViewBag.meta/@item.meta/@item.id">
+                            <div class="grid-img">
+                                <img src="~/Content/images/@item.img" class="img-responsive" alt="">
+                            </div>
+
+                        </a>
+                    </figure>
+                </div>
+                <div class="ribben">
+                    <p>NEW</p>
+                </div>
+                <div class="ribben1">
+                    <p>SALE</p>
+                </div>
+                <div class="block">
+                    <div class="starbox small ghosting"> </div>
+                </div>
+                <div class="women">
+                    <h6><a href="single.html">@item.name</a></h6>
+                    <span class="size">@item.size</span>
+                    <p><del>@item.price đ</del><em class="item_price">@item.price * 0.7 đ</em></p>
+
+                    <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Thêm vào giỏ hàng</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<div class="clearfix"> </div>
